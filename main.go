@@ -21,7 +21,7 @@ func faq(w http.ResponseWriter, r *http.Request) {
 }
 func notFound(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html")
-	w.WriteHeader((http.StatusNotFound))
+	w.WriteHeader(http.StatusNotFound)
 	fmt.Fprint(w, "The page does not excist! Sorry(")
 }
 
