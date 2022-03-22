@@ -28,6 +28,7 @@ func main() {
 	//services.DestructiveReset()
 	services.AutoMigrate()
 
+	// creating the router
 	r := mux.NewRouter()
 	staticC := controllers.NewStatic()
 	usersC := controllers.NewUsers(services.User)
