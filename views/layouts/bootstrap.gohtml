@@ -1,0 +1,23 @@
+{{define "bootstrap"}}
+<html lang="en">
+  <head>
+    <title>Starter Template for Bootstrap</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    {{template "navbar"}}
+    <div class="container-fluid">
+      {{if .Alert}}
+        {{template "alert" .Alert}}
+      {{end}}
+      {{template "yield" .Yield}}
+
+      {{template "footer"}}
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
+{{end}}

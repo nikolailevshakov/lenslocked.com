@@ -1,0 +1,22 @@
+{{define "yield"}}
+<div class="card text-dark bg-light mb-3" style="width: 30rem;">
+  <div class="card-body">
+    <h5 class="card-title">Welcome back!</h5>
+    {{template "loginForm"}}
+  </div>
+</div>
+{{end}}
+
+{{define "loginForm"}}
+<form action="/login" method="POST">
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" name="email" class="form-control" id="email">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Log In</button>
+</form>
+{{end}}
