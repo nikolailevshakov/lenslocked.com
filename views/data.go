@@ -4,7 +4,7 @@ const (
 	AlertLvlError   = "error"
 	AlertLvlWarning = "warning"
 	AlertLvlInfo    = "info"
-	AlrtLvlSuccess  = "success"
+	AlertLvlSuccess = "success"
 
 	AlertMsgGeneric = "Something went wrong. Please try again, and contact us if the problem persists."
 )
