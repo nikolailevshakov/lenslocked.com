@@ -58,6 +58,7 @@ func main() {
 		requireUserMw.ApplyFn(galleriesC.Edit)).Methods("GET").Name(controllers.EditGallery)
 	r.HandleFunc("/galleries/{id:[0-9+]/update}", requireUserMw.ApplyFn(galleriesC.Update)).Methods("POST")
 	r.HandleFunc("/galleries/{id:[0-9+]/delete}", requireUserMw.ApplyFn(galleriesC.Delete)).Methods("POST")
+	r.HandleFunc("/galleries/{id:[0-9+]/images}", requireUserMw.ApplyFn(galleriesC.ImageUpload)).Methods("POST")
 	http.ListenAndServe(":3000", userMw.Apply(r))
 }
 
